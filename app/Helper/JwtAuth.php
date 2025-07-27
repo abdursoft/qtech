@@ -17,7 +17,6 @@ class JWTAuth
             'nbf' => time() + 10,
             'exp' => time() + ($hour * 3600),
             'id'  => $id,
-            'user' => $user,
             'role' => $role
         ];
 

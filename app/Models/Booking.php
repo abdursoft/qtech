@@ -19,7 +19,7 @@ class Booking extends Model
     }
 
     // make the connection with services
-    public function services(){
+    public function service(){
         return $this->belongsTo(Service::class);
     }
 }

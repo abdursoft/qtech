@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->foreignId('service_id')->constrained('services')->cascadeOnDelete();
-            $table->timestamp('booking_date')->useCurrent();
-            $table->enum('status',['booked','pending','canceled','completed'])->default('pending');
+            $table->date('booking_date');
+            $table->enum('status',['booked','pending','canceled','completed'])->default('booked');
 
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();

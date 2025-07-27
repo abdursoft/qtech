@@ -1,20 +1,20 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class AdminController extends Controller
 {
     /**
-     * Show booking list according user
+     * Show booking list with user and services
      */
-    public function bookings(Request $request)
+    public function bookingList()
     {
         try {
-            $booking = Booking::with(['service'])->where('user_id',$request->auth['id'])->get();
+            $booking = Booking::with(['user','service'])->get();
 
             if ($booking) {
                 return response()->json([
