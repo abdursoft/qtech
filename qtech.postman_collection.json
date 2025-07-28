@@ -1,0 +1,326 @@
+{
+	"info": {
+		"_postman_id": "b603ac5e-170f-43af-af9e-076d3c3300f6",
+		"name": "qtech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37782082"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "create-service",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMjcuMC4wLjEiLCJhdWQiOiJhdXRoIiwiaWF0IjoxNzUzNjI3MTY5LCJuYmYiOjE3NTM2MjcxNzksImV4cCI6MTc1MzYzMDc2OSwiaWQiOjEsInJvbGUiOiJhZG1pbiJ9.3eLTfTnAKrcWHLXIzAVwHO5OhCNDhSx-UUlZgruZ-SI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Business Development\",\r\n    \"description\":\"Business development\",\r\n    \"status\":\"available\",\r\n    \"price\":200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_api}}/services",
+							"host": [
+								"{{base_api}}"
+							],
+							"path": [
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit-service",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMjcuMC4wLjEiLCJhdWQiOiJhdXRoIiwiaWF0IjoxNzUzNjI4OTQ1LCJuYmYiOjE3NTM2Mjg5NTUsImV4cCI6MTc1MzYzMjU0NSwiaWQiOjEsInJvbGUiOiJhZG1pbiJ9.vrD8m--rlBfEC0NWzTVaryBW2bP-H3YNvxaxBHIeINE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\":140\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_api}}/services/2",
+							"host": [
+								"{{base_api}}"
+							],
+							"path": [
+								"services",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-service",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMjcuMC4wLjEiLCJhdWQiOiJhdXRoIiwiaWF0IjoxNzUzNjI4OTQ1LCJuYmYiOjE3NTM2Mjg5NTUsImV4cCI6MTc1MzYzMjU0NSwiaWQiOjEsInJvbGUiOiJhZG1pbiJ9.vrD8m--rlBfEC0NWzTVaryBW2bP-H3YNvxaxBHIeINE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\":140\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_api}}/services/4",
+							"host": [
+								"{{base_api}}"
+							],
+							"path": [
+								"services",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-bookinglist",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMjcuMC4wLjEiLCJhdWQiOiJhdXRoIiwiaWF0IjoxNzUzNjI4OTQ1LCJuYmYiOjE3NTM2Mjg5NTUsImV4cCI6MTc1MzYzMjU0NSwiaWQiOjEsInJvbGUiOiJhZG1pbiJ9.vrD8m--rlBfEC0NWzTVaryBW2bP-H3YNvxaxBHIeINE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\":140\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_api}}/admin/bookings",
+							"host": [
+								"{{base_api}}"
+							],
+							"path": [
+								"admin",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "get-services",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMjcuMC4wLjEiLCJhdWQiOiJhdXRoIiwiaWF0IjoxNzUzNjMwNDE0LCJuYmYiOjE3NTM2MzA0MjQsImV4cCI6MTc1MzYzNDAxNCwiaWQiOjIsInJvbGUiOiJjdXN0b21lciJ9.QWMCyKNoxlLb1h_cNww9xgBwNd84A26TZbMIIKPITZQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Web Development\",\r\n    \"description\":\"We application development with Laravel and vue.js\",\r\n    \"status\":\"available\",\r\n    \"price\":250\r\n}"
+						},
+						"url": {
+							"raw": "{{base_api}}/services",
+							"host": [
+								"{{base_api}}"
+							],
+							"path": [
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-bookings",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMjcuMC4wLjEiLCJhdWQiOiJhdXRoIiwiaWF0IjoxNzUzNjI3NjMwLCJuYmYiOjE3NTM2Mjc2NDAsImV4cCI6MTc1MzYzMTIzMCwiaWQiOjIsInJvbGUiOiJjdXN0b21lciJ9.xd1U6-LLa27OW9N2Px7eRBc8Wvf-XVuTTalbV95SLWo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Web Development\",\r\n    \"description\":\"We application development with Laravel and vue.js\",\r\n    \"status\":\"available\",\r\n    \"price\":250\r\n}"
+						},
+						"url": {
+							"raw": "{{base_api}}/bookings",
+							"host": [
+								"{{base_api}}"
+							],
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-bookings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMjcuMC4wLjEiLCJhdWQiOiJhdXRoIiwiaWF0IjoxNzUzNjI3NjMwLCJuYmYiOjE3NTM2Mjc2NDAsImV4cCI6MTc1MzYzMTIzMCwiaWQiOjIsInJvbGUiOiJjdXN0b21lciJ9.xd1U6-LLa27OW9N2Px7eRBc8Wvf-XVuTTalbV95SLWo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\":2,\r\n    \"service_id\":1,\r\n    \"booking_date\":\"2025/08/05\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_api}}/bookings",
+							"host": [
+								"{{base_api}}"
+							],
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Abdur Rahim\",\r\n    \"email\":\"abdursoft@gmail.com\",\r\n    \"password\":\"pass1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_api}}/register",
+					"host": [
+						"{{base_api}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"abdursoft@gmail.com\",\r\n    \"password\":\"pass1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_api}}/login",
+					"host": [
+						"{{base_api}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

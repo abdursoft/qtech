@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Booking;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -77,6 +78,14 @@ class BookingController extends Controller
                 'message' => 'Validation failed',
                 'errors'  => $validator->errors(),
             ], 422);
+        }
+
+        $service = Service::find($request->input('service_id'));
+        if ($service->status !== 'available') {
+            return response()->json([
+                'status'  => 'fail',
+                'message' => 'This service is not available for booking',
+            ], 400);
         }
 
         try {
